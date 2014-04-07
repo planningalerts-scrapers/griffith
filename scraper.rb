@@ -16,12 +16,12 @@ def scrape_page(page, info_url_base, comment_url)
       "date_scraped" => Date.today.to_s,
       "comment_url" => comment_url
     }
-    p record
-    # if (ScraperWiki.select("* from data where `council_reference`='#{record['council_reference']}'").empty? rescue true)
-    #   ScraperWiki.save_sqlite(['council_reference'], record)
-    # else
-    #   puts "Skipping already saved record " + record['council_reference']
-    # end
+    # p record
+    if (ScraperWiki.select("* from data where `council_reference`='#{record['council_reference']}'").empty? rescue true)
+      ScraperWiki.save_sqlite(['council_reference'], record)
+    else
+      puts "Skipping already saved record " + record['council_reference']
+    end
   end
 end
 
