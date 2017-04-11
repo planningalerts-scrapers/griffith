@@ -9,9 +9,10 @@ This site is a typical .NET site involves the followings.
 * JSON - Yes
 
 Setup MORPH_PERIOD for data recovery, available options are
-* thisweek (default, today - 1 week)
+* thisweek (default, today - 10 days)
 * thismonth
 * lastmonth
+* custom = yyyy-mm   ( eg. 2017-01 )
 
 Enjoy
 
